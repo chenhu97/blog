@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+	<!-- C3P0的缺省(默认配置) -->
+	<default-config>
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		<property name="jdbcUrl">jdbc:mysql://localhost:23306/db_blog?characterEncoding=utf-8&amp;useSSL=false</property>
+		<property name="user">root</property>
+		<property name="password">root</property>
+		
+		
+		<!-- 连接池初始时建立的连接数,默认值是10 -->
+		<property name="initialPoolSize">1</property>
+		<!-- 连接池中保持的最小连接数,默认值是10 -->
+		<property name="minPoolSize">1</property>
+		<!-- 连接池中保持的最大连接数,默认值是10 -->
+		<property name="maxPoolSize">1</property>
+		
+		<!-- 连接的最大空闲时间,单位秒,默认是0,代表永远不会断开连接,超过设定时间的空闲连接会断开 -->
+		<property name="maxIdleTime">0</property>
+		<!-- 将连接池的连接数保持在minPoolSize必须小于maxIdleTime设置,默认值为0代表不处理 单位秒 -->
+		<property name="maxIdleTimeExcessConnections">0</property>
+	</default-config>
+	<!-- C3P0的命名配置 name=Mysql -->
+	<!-- C3P0的命名配置 name=Oracle -->
+</c3p0-config>
